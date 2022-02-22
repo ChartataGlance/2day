@@ -1,0 +1,271 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Russo+One&display=swap");
+
+* > * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	
+	height: 100vh;
+}
+
+
+.container {
+	background: rgb(5, 5, 22);
+   display: flex;
+   align-items: center;
+	justify-content: space-around;
+	width: 99%;
+   height: 100vh;
+	background: linear-gradient(#000, #000);
+	margin: 0 auto;
+	
+}
+
+.card {
+	width: 600px;
+	height: 350px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+	position: relative;
+	margin: 0 auto;
+	--border-radius: 15px;
+	--border-width: 4px;
+	appearance: none;
+	position: relative;
+	padding: 1em 2em;
+	border: 0;
+	background: rgb(8, 8, 44);
+	font-size: 18px;
+	font-weight: 500;
+	color: rgb(23, 16, 114);
+	z-index: 2;
+	border-radius: 15px;
+}
+.card img {
+   width: 100%;
+}
+
+.card::after {
+	--m-i: linear-gradient(#000, #000);
+	--m-o: content-box, padding-box;
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: var(--border-width);
+	border-radius: var(--border-radius);
+	background-image: conic-gradient(
+		#488cfb,
+		#29dbbc,
+		#ddf505,
+		#ff9f0e,
+		#e440bb,
+		#655adc,
+		#488cfb
+	);
+	-webkit-mask-image: var(--m-i), var(--m-i);
+	mask-image: var(--m-i), var(--m-i);
+	-webkit-mask-origin: var(--m-o);
+	mask-origin: var(--m-o);
+	-webkit-mask-clip: var(--m-o);
+	mask-composite: exclude;
+	-webkit-mask-composite: destination-out;
+	filter: hue-rotate(0);
+	animation: rotate-hue linear 500ms infinite;
+	animation-play-state: paused;
+}
+
+.card:hover::after {
+	animation-play-state: running;
+}
+
+@keyframes rotate-hue {
+	to {
+		filter: hue-rotate(1turn);
+	}
+}
+
+.card,
+.card::after {
+	box-sizing: border-box;
+}
+
+.card:active {
+	--border-width: 5px;
+}
+
+button {
+	position: relative;
+	padding: 19px 36px;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	border-radius: 40px;
+	border: none;
+}
+
+button span {
+	position: relative;
+	color: rgb(255, 255, 255);
+	font-family: poppins, Helvetica, sans-serif;
+   font-size: 2rem;
+	letter-spacing: 8px;
+	z-index: 1;
+}
+
+button .liquid {
+   
+	position: absolute;
+	top: -80px;
+	left: 0;
+	width: 100%;
+	height: 400px;
+	background: #4973ff;
+	-webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+button .liquid::after,
+button .liquid::before {
+	content: "";
+	width: 200%;
+	height: 200%;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translate(-50%, -75%);
+	-ms-transform: translate(-50%, -75%);
+	transform: translate(-50%, -75%);
+	background: #fff;
+}
+
+button .liquid::before {
+	border-radius: 45%;
+	background: rgba(20, 20, 20, 1);
+	-webkit-animation: animate 5s linear infinite;
+	animation: animate 5s linear infinite;
+}
+
+button .liquid::after {
+	border-radius: 40%;
+	background: rgba(20, 20, 20, 0.5);
+	-webkit-animation: animate 10s linear infinite;
+	animation: animate 10s linear infinite;
+}
+
+button:hover .liquid {
+	top: -120px;
+}
+
+@-webkit-keyframes animate {
+	0% {
+		-webkit-transform: translate(-50%, -75%) rotate(0deg);
+		transform: translate(-50%, -75%) rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: translate(-50%, -75%) rotate(360deg);
+		transform: translate(-50%, -75%) rotate(360deg);
+	}
+}
+
+@keyframes animate {
+	0% {
+		-webkit-transform: translate(-50%, -75%) rotate(0deg);
+		transform: translate(-50%, -75%) rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: translate(-50%, -75%) rotate(360deg);
+		transform: translate(-50%, -75%) rotate(360deg);
+	}
+}
+
+.btn {
+	background: #84d934;
+	background-image: -webkit-linear-gradient(top, #84d934, #472bb8);
+	background-image: -moz-linear-gradient(top, #84d934, #472bb8);
+	background-image: -ms-linear-gradient(top, #84d934, #472bb8);
+	background-image: -o-linear-gradient(top, #84d934, #472bb8);
+	background-image: linear-gradient(to bottom, #84d934, #472bb8);
+	-webkit-border-radius: 36;
+	-moz-border-radius: 36;
+	border-radius: 36px;
+	text-shadow: 5px 5px 9px #000000;
+	-webkit-box-shadow: 3px 4px 6px #666666;
+	-moz-box-shadow: 3px 4px 6px #666666;
+	box-shadow: 3px 4px 6px #666666;
+	font-family: Georgia;
+	color: #ffffff;
+	font-size: 60px;
+	padding: 18px;
+	border: solid #1f628d 9px;
+	text-decoration: none;
+}
+
+.btn:hover {
+	background: #030ff0;
+	background-image: -webkit-linear-gradient(top, #030ff0, #c4ff00);
+	background-image: -moz-linear-gradient(top, #030ff0, #c4ff00);
+	background-image: -ms-linear-gradient(top, #030ff0, #c4ff00);
+	background-image: -o-linear-gradient(top, #030ff0, #c4ff00);
+	background-image: linear-gradient(to bottom, #030ff0, #c4ff00);
+	text-decoration: none;
+}
+
+@media  screen and (min-width:480px) {
+   .container{
+      max-width: 480px;
+   } 
+   
+}
+@media  screen and (min-width:640px) {
+   .container{
+      max-width: 640px;
+   } 
+   
+}
+
+@media  screen and (min-width:786px) {
+   .container{
+      max-width: 786px;
+   }
+   
+}
+@media  screen and (min-width:1024px) {
+   .container{
+      max-width: 1024px;
+   }
+   
+}
+@media  screen and (min-width:1280px) {
+   .container{
+      max-width: 1280px;
+   }
+
+
+}
+
+@media  screen and (min-width:1420px) {
+   .container{
+      max-width: 1420px;
+   }
+   
+}
+@media  screen and (min-width:1920px) {
+   .container{
+      max-width: 1920px;
+   }
+
+}
