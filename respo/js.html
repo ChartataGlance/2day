@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Media Query Testing</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<style>
+   body{
+      background: black;
+   }
+   .secondary{
+      height: 10vh;
+      background-color: wheat;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+
+
+   }
+</style>
+
+  <nav id="secondary-nav" class="secondary">   
+     <div class="button-group">
+       <a href="#quick-links" class="mobile-button">Quick Links</a>
+       <a href="#site-search" class="mobile-button search-button">Site Search</a>
+     </div>
+     <ul id="quick-links" class="quick-links-menu secondary-menu">
+       <li><a href="#" title="">News</a></li>
+       <li><a href="#" title="">Account Info</a></li>
+       <li><a href="#" title="">FAQ</a></li>
+       <li><a href="#" title="">Help</a></li>
+     </ul>
+     <fieldset id="site-search" class="site-search secondary-menu">
+       <input class="search-field" type="search" name="site-search">
+       <input class="search-submit" type="submit" value="Search">
+     </fieldset>
+   </nav>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="mediaCheck.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -22,9 +22,14 @@
       transform: translate(-50 -50);
       flex-direction: column;
       margin: 0 auto;
+    
    }
    
-   
+  
+   img, iframe, object, embed, video {
+    width: 100%;
+    max-width: 100%;
+} 
 
    @media (min-width:640px) {
       .container {
@@ -50,25 +55,30 @@
       }
    }
 
-   @media (min-width:1536px) {
+   @media (min-width:1440px) {
       .container {
-         max-width: 1536px
+         max-width: 1440px
       }
    }
 
-   @media (min-width:1440px) {
+   @media (min-width:1536px) {
       .container {
          max-width: 1536px
       }
     
    }
+  
 </style>
 
 <body>
    <div class="container">
-      <iframe height="400px" width="400px" src="https://chartataglance.co.uk/22022022.html" frameborder="0"></iframe>
+     <img src="./showcase1.png" alt="">
 
    </div>
+   <div class="container">
+      <img src="./showcase1.png" alt="">
+ 
+    </div>
 </body>
 
 </html>
